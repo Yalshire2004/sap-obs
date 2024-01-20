@@ -33,7 +33,7 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Por favor ingrese el texto para evaluar</label>
                         <input type="text" class="form-control" id="texto" placeholder="texto para evaluar" name="texto">
-                       
+                        {% if data %}
                             {% if data[0]["label"]== "POSITIVE" %}
                                 <div class="mt-2 text-success">
                                     <h3> Sentimiento : {{data[0]["label"]}}</h3>
@@ -44,6 +44,7 @@
                                     <h3> Sentimiento : {{data[0]["label"]}}</h3>
                                     <h3> Resultado : {{data[0]["score"]}}</h3>
                                 </div>   
+                            {% endif %}
                             {% endif %}
                         
                     </div>

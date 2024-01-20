@@ -9,7 +9,6 @@ app = Flask(__name__)
 # main route
 @app.route("/",methods=["GET"])
 def main():
-
     if request.method == 'GET':
         data={}
         return render_template("index.html",data=data)
