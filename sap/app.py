@@ -4,7 +4,7 @@ from flask import render_template,request,redirect
 from transformers import pipeline
 
 # # instanciate flask app
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # main route
 @app.route("/",methods=["GET"])
