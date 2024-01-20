@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Sentiment Analysis Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <main>
+            <div class="container py-4">
+              <header class="pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <span class="fs-4">Actividad: Big Data - IA - Data Scient </span>
+                </a>
+              </header>
+          
+              <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                  <form method="POST" action="{{ url_for('evaluar') }}">
+                    <h1 class="display-5 fw-bold">Proyecto de Análisis de Sentimiento </h1>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Por favor ingrese el texto para evaluar</label>
+                        <input type="text" class="form-control" id="texto" placeholder="texto para evaluar" name="texto">
+                       
+                            {% if data[0]["label"]== "POSITIVE" %}
+                                <div class="mt-2 text-success">
+                                    <h3> Sentimiento : {{data[0]["label"]}}</h3>
+                                    <h3> Resultado : {{data[0]["score"]}}</h3>
+                                </div>
+                                {% else %}
+                                <div class="mt-2 text-danger">
+                                    <h3> Sentimiento : {{data[0]["label"]}}</h3>
+                                    <h3> Resultado : {{data[0]["score"]}}</h3>
+                                </div>   
+                            {% endif %}
+                        
+                    </div>
+                    <button class="btn btn-primary btn-lg" type="submit">Evaluar</button>
+                </form>
+                </div>
+              </div>
+          
+              <div class="align-items-md-stretch">
+                <div class="col-md-12">
+                  <div class="h-100 p-5 text-white bg-secondary rounded-3">
+                    <h2>Desempeño en un miniproyecto de Machine Learning.</h2>
+                    <hr>
+                    <h4>Definición del Problema:</h4>
+                    <h4>Selección de la Herramienta "Zero Code":</h4>
+                        <h4>Preparación de Datos:</h4>
+                            <h4>Definición del Problema:</h4>
+                                <h4>Selección de Variables y Características: </h4>
+                                    <h4>Configuración del Modelo:</h4>
+                                        <h4>Entrenamiento y Validación del Modelo:</h4>
+                                            <h4>Etapas tecnicas:</h4>
+   
+                    </div>
+                  </div>
+                </div>
+
+          
+              <footer class="pt-3 mt-4 text-muted border-top ">
+                 <span class="txt-center">  Realizado por Eric ATTERE &copy; Enero 2024 <span>
+              </footer>
+            </div>
+          </main>
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    </body>
+</html>
