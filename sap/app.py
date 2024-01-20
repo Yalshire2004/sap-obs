@@ -3,8 +3,8 @@ from flask import Flask
 from flask import render_template,request,redirect
 from transformers import pipeline
 
-# instanciate flask app
-app = Flask(__name__)
+# # instanciate flask app
+# app = Flask(__name__)
 
 # main route
 @app.route("/",methods=["GET"])
